@@ -63,7 +63,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    let cards = document.querySelectorAll("#habilidades .card");
+    cards.forEach((card) => {
+      card.setAttribute("data-aos", "flip-left");
+    });
+  },
+};
 </script>
 
 <style scoped>

@@ -34,15 +34,12 @@ export default {
     };
   },
   mounted() {
-    const home = document.querySelector("#home");
-    const about = document.querySelector("#sobre");
-    const skills = document.querySelector("#habilidades");
-    const portfolio = document.querySelector("#portfolio");
-    const contact = document.querySelector("#contato");
-    const allElements = [home, about, skills, portfolio, contact, allElements];
     window.addEventListener("scroll", () => {
       this.headerResize();
     });
+    let script = document.createElement("script");
+    script.innerHTML = `AOS.init();`;
+    document.head.appendChild(script);
   },
   methods: {
     headerResize() {
@@ -77,6 +74,7 @@ html {
 #app {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
 .btn {
   color: var(--white);
@@ -99,7 +97,6 @@ section {
   display: inline-block;
   border-bottom: 2px solid var(--purple);
 }
-
 @media (max-width: 650px) {
   .title-section h1 {
     font-size: 4rem;

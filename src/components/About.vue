@@ -4,8 +4,8 @@
       <h1>Sobre mim</h1>
     </div>
     <div class="container">
-      <div class="profile"></div>
-      <div class="about">
+      <div class="profile" data-aos="fade-right"></div>
+      <div class="about" data-aos="fade-left">
         <h2>Olá, me chamo João Túlio</h2>
         <p>
           Sou um jovem desenvolvedor formado em técnico em informática. Sou
@@ -45,9 +45,13 @@
             <img src="../assets/discord-icon.svg" alt="Icone Discord" />
           </a>
         </div>
-        <a class="btn" href="../assets/curriculo.pdf" download="curriculo.pdf"
-          >Baixar curriculo</a
-        >
+        <a
+          class="btn"
+          href="../assets/JoaoTulio.pdf"
+          target="_blank"
+          download="JoaoTulio.pdf"
+          >Baixar curriculo
+        </a>
       </div>
     </div>
   </section>

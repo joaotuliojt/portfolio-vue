@@ -4,7 +4,7 @@
       <h1>Portfólio</h1>
     </div>
     <div class="container">
-      <div class="project">
+      <div class="project" data-aos="fade-up">
         <div class="project__image">
           <img
             src="https://github.com/joaotuliojt/fc-squad43/raw/main/github/tela_inicial.png"
@@ -26,7 +26,7 @@
         </div>
       </div>
 
-      <div class="project">
+      <div class="project" data-aos="fade-up">
         <div class="project__image">
           <img
             src="https://camo.githubusercontent.com/c47a38088a558e3f8246bce9f759b498f1f336eb39ce230c2fb9a776347b52fc/68747470733a2f2f696d6775722e636f6d2f69704c484646622e676966"
@@ -49,7 +49,7 @@
         </div>
       </div>
 
-      <div class="project">
+      <div class="project" data-aos="fade-up">
         <div class="project__image">
           <img
             src="https://github.com/joaotuliojt/sunnyside-agency/raw/main/design/desktop-preview.jpg"

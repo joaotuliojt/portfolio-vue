@@ -89,7 +89,7 @@ header a {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  background: var(--blue);
+  background: var(--green);
   transition: 0.25s;
 }
 .navigation a.is-active::after {
