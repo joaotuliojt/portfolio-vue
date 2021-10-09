@@ -1,6 +1,7 @@
 <template>
   <div class="loading" v-if="loading">
     <atom-spinner :animation-duration="1000" :size="180" :color="'#8257e6'" />
+    <p>Carregando...</p>
   </div>
   <header-component></header-component>
   <main>
@@ -39,23 +40,57 @@ export default {
     };
   },
   mounted() {
-    setTimeout(() => {
-      this.loading = false;
-    }, 2000);
+    const sections = document.querySelectorAll("main section");
+    //this.setMargin();
     window.addEventListener("scroll", () => {
-      this.headerResize();
+      this.activateMenuAtCurrentSection(sections);
     });
-    let script = document.createElement("script");
-    script.innerHTML = `AOS.init();`;
-    document.head.appendChild(script);
+    this.aosInit();
+    this.setFalseLoading();
   },
   methods: {
-    headerResize() {
-      let header = document.querySelector("#header");
-      if (window.scrollY > header.offsetHeight + 600) {
-        header.classList.add("stick");
-      } else {
-        header.classList.remove("stick");
+    setMargin() {
+      let home = document.querySelector("section#home");
+      let headerHeight = document.querySelector("header").clientHeight;
+      home.style += `margin-top: ${headerHeight}`;
+    },
+    aosInit() {
+      let script = document.createElement("script");
+      script.innerHTML = `AOS.init();`;
+      document.head.appendChild(script);
+    },
+    setFalseLoading() {
+      setTimeout(() => {
+        this.loading = false;
+      }, 2000);
+    },
+    activateMenuAtCurrentSection(sections) {
+      const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4;
+      const header = document.querySelector("header");
+      //console.log(sections);
+      for (const section of sections) {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute("id");
+
+        const checkpointStart = checkpoint >= sectionTop;
+        const checkpointEnd = checkpoint <= sectionTop + sectionHeight;
+
+        if (checkpointStart && checkpointEnd) {
+          document
+            .querySelector(".navigation a[href*=" + sectionId + "]")
+            .classList.add("is-active");
+
+          if (section.getAttribute("id") != "home") {
+            header.classList.add("fixed");
+          } else {
+            header.classList.remove("fixed");
+          }
+        } else {
+          document
+            .querySelector(".navigation a[href*=" + sectionId + "]")
+            .classList.remove("is-active");
+        }
       }
     },
   },
@@ -88,6 +123,7 @@ html {
   width: 100%;
   height: 100%;
   transition: 0.25s;
+  flex-direction: column;
 }
 #app {
   font-size: 1.6rem;

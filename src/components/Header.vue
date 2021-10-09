@@ -2,7 +2,7 @@
   <header id="header">
     <a href="#home" id="logo"> J.T</a>
     <nav class="navigation" @click="close">
-      <a class="is-active" href="#home">Home</a>
+      <a href="#home">Home</a>
       <a href="#sobre">Sobre mim</a>
       <a href="#habilidades">Habilidades</a>
       <a href="#portfolio">Portfólio</a>
@@ -15,19 +15,6 @@
 
 <script>
 export default {
-  mounted() {
-    const links = document.querySelectorAll(".navigation a");
-    links.forEach((link) => {
-      link.addEventListener("click", () => {
-        links.forEach((link) => {
-          link.removeAttribute("class");
-        });
-        setTimeout(() => {
-          link.setAttribute("class", "is-active");
-        }, 500);
-      });
-    });
-  },
   methods: {
     toggleMenu(e) {
       e.target.classList.toggle("active");
@@ -43,10 +30,11 @@ export default {
 
 <style scoped>
 header {
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.8rem 5rem;
+  padding: 1.2rem 5rem;
   top: 0;
   left: 0;
   width: 100%;
@@ -54,10 +42,17 @@ header {
   transition: 0.25s;
   z-index: 1000;
 }
-header.stick {
+header.fixed {
+  animation: downMenu 1s;
   position: fixed;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+}
+@keyframes downMenu {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 header a {
   color: var(--white);
