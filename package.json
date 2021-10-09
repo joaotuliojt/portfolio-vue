@@ -10,6 +10,7 @@
   "dependencies": {
     "@vueuse/core": "^6.5.3",
     "core-js": "^3.6.5",
+    "epic-spinners": "^1.1.0",
     "swiper": "^7.0.8",
     "vue": "^3.0.0",
     "vue-split-carousel": "^2.2.0",

@@ -1,4 +1,7 @@
 <template>
+  <div class="loading" v-if="loading">
+    <atom-spinner :animation-duration="1000" :size="180" :color="'#8257e6'" />
+  </div>
   <header-component></header-component>
   <main>
     <home></home>
@@ -18,6 +21,7 @@ import Skills from "./components/Skills.vue";
 import Portfolio from "./components/Portfolio.vue";
 import Contato from "./components/Contato.vue";
 import FooterComponent from "./components/Footer.vue";
+import { AtomSpinner } from "epic-spinners";
 export default {
   components: {
     HeaderComponent,
@@ -27,13 +31,17 @@ export default {
     Portfolio,
     Contato,
     FooterComponent,
+    AtomSpinner,
   },
   data() {
     return {
-      isVisible: false,
+      loading: true,
     };
   },
   mounted() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 2000);
     window.addEventListener("scroll", () => {
       this.headerResize();
     });
@@ -44,7 +52,7 @@ export default {
   methods: {
     headerResize() {
       let header = document.querySelector("#header");
-      if (window.scrollY > header.offsetHeight + 10) {
+      if (window.scrollY > header.offsetHeight + 600) {
         header.classList.add("stick");
       } else {
         header.classList.remove("stick");
@@ -70,7 +78,17 @@ html {
   --green: #26c485;
   scroll-behavior: smooth;
 }
-
+.loading {
+  background: var(--white);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  transition: 0.25s;
+}
 #app {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;

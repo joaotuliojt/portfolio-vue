@@ -58,6 +58,20 @@
           <h3>Typescript</h3>
         </div>
       </div>
+
+      <div class="card">
+        <div class="card__header bg-mysql">
+          <img src="../assets/mysql-icon.svg" alt="Mysql icon" />
+          <h3>MySql</h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__header bg-sass">
+          <img src="../assets/sass-icon.svg" alt="Sass icon" />
+          <h3>Sass</h3>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -137,6 +151,14 @@ section {
 }
 .card:hover .bg-typescript {
   background: #12457a;
+}
+
+.card:hover .bg-mysql {
+  background: #073742;
+}
+
+.card:hover .bg-sass {
+  background: #803358;
 }
 
 @media (max-width: 850px) {

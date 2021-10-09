@@ -4,5 +4,4 @@ import VueParticles from "vue-particles";
 
 const app = createApp(App);
 app.use(VueParticles);
-
 app.mount("#app");
