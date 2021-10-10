@@ -45,11 +45,7 @@
             <img src="../assets/discord-icon.svg" alt="Icone Discord" />
           </a>
         </div>
-        <a
-          class="btn"
-          href="../assets/JoaoTulio.pdf"
-          target="_blank"
-          download="JoaoTulio.pdf"
+        <a class="btn" href="/Curriculo.pdf" download="CV_JoaoTulio.pdf"
           >Baixar curriculo
         </a>
       </div>

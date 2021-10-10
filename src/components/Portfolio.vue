@@ -14,13 +14,16 @@
         <div class="description">
           <h3>Hackathon: FCallendar</h3>
           <p>
-            O FCallendar é uma aplicação WEB criada para ajudar com a volta do
-            modelo híbrido de trabalho.
+            O FCallendar é uma aplicação WEB criada para ajudar no gerenciamento
+            na volta dos profissionais para o escritório na pandemia do COVID-19
+            para evitar aglomeramento e superlotação.
           </p>
           <a
             href="https://github.com/joaotuliojt/fc-squad43"
             target="_blank"
             class="btn"
+            title="Veja o site"
+            aria-labelledby="Veja mais"
             >Veja Mais</a
           >
         </div>
@@ -44,6 +47,8 @@
             href="https://joaotuliojt.github.io/dv-musica-library-page/"
             target="_blank"
             class="btn"
+            title="Veja o site"
+            aria-labelledby="Veja mais"
             >Veja Mais</a
           >
         </div>
@@ -59,13 +64,61 @@
         <div class="description">
           <h3>Frontend Mentor - Sunnyside agency landing page</h3>
           <p>
-            Uma landing page proposta pela Fronend Mentor. O projeto se trata de
-            uma landing page bonita e colorida.
+            Uma landing page proposta pela Frontend Mentor. O projeto se trata
+            de uma landing page bonita e colorida.
           </p>
           <a
             href="https://joaotuliojt.github.io/sunnyside-agency/"
             target="_blank"
             class="btn"
+            title="Veja o site"
+            aria-labelledby="Veja mais"
+            >Veja Mais</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="title-section">
+      <h2>Projetos de estudo</h2>
+    </div>
+    <div class="container">
+      <div class="project" data-aos="fade-up">
+        <div class="project__image">
+          <img src="../assets/Relógio.gif" alt="" />
+        </div>
+        <div class="description">
+          <h3>Relógio Digital</h3>
+          <p>
+            Um relógio digital feito com HTML, CSS e JavaScript com intuito de
+            aprofundar mais sobre o objeto Date do JS e estilizações e animações
+            com CSS.
+          </p>
+          <a
+            href="https://joaotuliojt.github.io/relogio-digital-js/"
+            target="_blank"
+            class="btn"
+            title="Veja o site"
+            aria-labelledby="Veja mais"
+            >Veja Mais</a
+          >
+        </div>
+      </div>
+      <div class="project" data-aos="fade-up">
+        <div class="project__image">
+          <img src="../assets/Cronometro.gif" alt="" />
+        </div>
+        <div class="description">
+          <h3>Cronômetro</h3>
+          <p>
+            Um cronômetro feito com HTML, CSS e JavaScript com intuito de
+            aprofundar mais sobre o objeto Date do Js e estilzações com CSS.
+          </p>
+          <a
+            href="https://joaotuliojt.github.io/timer-Js/"
+            target="_blank"
+            class="btn"
+            title="Veja o site"
+            aria-labelledby="Veja mais"
             >Veja Mais</a
           >
         </div>

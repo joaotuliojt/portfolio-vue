@@ -113,6 +113,16 @@ html {
   --green: #26c485;
   scroll-behavior: smooth;
 }
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+  background: var(--black);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--green);
+  border-radius: 0.6rem;
+}
 .loading {
   background: var(--white);
   position: fixed;
